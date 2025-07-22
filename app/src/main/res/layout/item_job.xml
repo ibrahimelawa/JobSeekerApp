@@ -1,0 +1,242 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:elevation="4dp"
+    android:padding="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="4dp"
+                android:gravity="center_vertical"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/img_job_logo_small"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="4dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_language" />
+
+                <TextView
+                    android:id="@+id/txt_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="30 min"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#2C3E50" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/img_share"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/share"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"                />
+
+            <ImageView
+                android:id="@+id/img_bookmark"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_bookmark"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txt_job_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Job Title"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp"
+            android:gravity="center_vertical"
+            android:layout_marginStart="16dp">
+
+            <ImageView
+                android:id="@+id/logo_company"
+                android:scaleType="centerCrop"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_language"
+                android:layout_marginEnd="4dp" />
+
+            <TextView
+                android:id="@+id/txt_company_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PURE for IT Solutions"
+                android:textSize="16sp"
+                android:textColor="#444444" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            android:weightSum="2"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:background="#ffff"
+                android:padding="6dp"
+                android:layout_marginEnd="4dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_tag"
+                    android:layout_marginEnd="4dp" />
+
+                <TextView
+                    android:id="@+id/txt_field"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Field"
+                    android:textSize="12sp"
+                    android:textColor="#4DB6AC" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:background="#ffff"
+                android:padding="6dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_salary"
+                    android:layout_marginEnd="4dp" />
+
+                <TextView
+                    android:id="@+id/txt_salary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Salary"
+                    android:textSize="12sp"
+                    android:textColor="#4DB6AC" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp"
+            android:weightSum="2"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:background="#ffff"
+                android:padding="6dp"
+                android:layout_marginEnd="4dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_experience"
+                    android:layout_marginEnd="4dp" />
+
+                <TextView
+                    android:id="@+id/txt_experience"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Experience"
+                    android:textSize="12sp"
+                    android:textColor="#4DB6AC" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:background="#ffff"
+                android:padding="6dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/ic_expiry"
+                    android:layout_marginEnd="4dp" />
+
+                <TextView
+                    android:id="@+id/txt_expiry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Expiry"
+                    android:textSize="12sp"
+                    android:textColor="#4DB6AC" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txt_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Description"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"/>
+
+        <LinearLayout
+            android:id="@+id/layout_skills"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

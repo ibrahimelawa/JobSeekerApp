@@ -14,22 +14,36 @@ import java.util.List;
 
 public class CompanyAdapter extends RecyclerView.Adapter<CompanyAdapter.CompanyViewHolder> {
 
-    private List<Company> companyList;
+    List<Company> companyList;
+    OnCompanyClickListener listener;
 
-    public CompanyAdapter(List<Company> companyList) {
+    public interface OnCompanyClickListener {
+        void onCompanyClick(Company company);
+    }
+
+    public CompanyAdapter(List<Company> companyList, OnCompanyClickListener listener) {
         this.companyList = companyList;
+        this.listener = listener;
     }
 
     @NonNull
     @Override
     public CompanyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(android.R.layout.simple_list_item_1, parent, false);
+        View view = LayoutInflater.from(parent.getContext())
+                .inflate(android.R.layout.simple_list_item_1, parent, false);
         return new CompanyViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull CompanyViewHolder holder, int position) {
-        holder.txtName.setText(companyList.get(position).getName());
+        Company company = companyList.get(position);
+        holder.txtName.setText(company.getName());
+
+        holder.itemView.setOnClickListener(v -> {
+            if (listener != null) {
+                listener.onCompanyClick(company);
+            }
+        });
     }
 
     @Override
@@ -38,7 +52,9 @@ public class CompanyAdapter extends RecyclerView.Adapter<CompanyAdapter.CompanyV
     }
 
     public static class CompanyViewHolder extends RecyclerView.ViewHolder {
+
         TextView txtName;
+
         public CompanyViewHolder(@NonNull View itemView) {
             super(itemView);
             txtName = itemView.findViewById(android.R.id.text1);
